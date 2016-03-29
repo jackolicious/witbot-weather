@@ -1,0 +1,25 @@
+{
+  "name": "witbot-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackolicious/witbot-weather.git"
+  },
+  "author": "Jack Hirsch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jackolicious/witbot-weather/issues"
+  },
+  "homepage": "https://github.com/jackolicious/witbot-weather#readme",
+  "dependencies": {
+    "botkit": "0.0.14",
+    "request": "^2.69.0",
+    "witbot": "^2.1.0"
+  }
+}
