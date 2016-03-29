@@ -27,11 +27,11 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   var wit = witbot.process(message.text, bot, message)
 
   wit.hears('hello',0.5, function(bot, message, outcome) {
-    bot.reply(message, 'Greetings human!')
+    bot.reply(message, 'Greetings human! :robot_face: :wave:')
   })
 
   wit.hears('how_are_you',0.5, function(bot, message, outcome) {
-    bot.reply(message, 'Meh. I\'m a bot. I\'m doing as well as could be expected.')
+    bot.reply(message, 'Meh. I\'m a bot. I\'m doing as well as could be expected. ¯\_(ツ)_/¯')
   })
 
   wit.hears('thanks',0.5, function(bot, message, outcome) {
