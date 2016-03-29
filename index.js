@@ -31,7 +31,7 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   })
 
   wit.hears('how_are_you',0.5, function(bot, message, outcome) {
-    bot.reply(message, "Meh. I\'m a bot. I\'m doing as well as could be expected. ¯\\_(ツ)_/¯")
+    bot.reply(message, "I\'m a bot. I\'m doing as well as could be expected. ¯\\_(ツ)_/¯")
   })
 
   wit.hears('thanks',0.5, function(bot, message, outcome) {
