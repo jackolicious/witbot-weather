@@ -6,3 +6,5 @@ config:
     info: get this key from Open Weather
   - name: WIT_TOKEN
     friendly_name: wit.ai API Key
+  - name: QPXKEY
+    friendly_name: QPX Flight search key
