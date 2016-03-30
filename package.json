@@ -21,6 +21,6 @@
     "botkit": "0.0.14",
     "request": "^2.69.0",
     "witbot": "^2.1.0",
-    "dateform": "^1.0"
+    "dateformat": "^1.0"
   }
 }
