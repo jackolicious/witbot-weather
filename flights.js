@@ -30,7 +30,7 @@ function Flights(token) {
     	};
     qpx.getInfo(body, function(error, data){
       fn(null,' > :airplane: Going one-way from *'+ origin + '* to *' + destination + '* on *' + date + '*?\n'+
-        ' > Cheapest ticket found: '+ data.trips.tripOption[0].saleTotal)
+        '> Cheapest ticket found: *'+ data.trips.tripOption[0].saleTotal+'*')
     	console.log('Cheapest one-way flight found: ', data.trips.tripOption[0].saleTotal);
     });
 
