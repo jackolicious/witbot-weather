@@ -94,7 +94,7 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   })
 
   wit.otherwise(function (outcome) {
-    bot.reply(message, "> Beep boop pssskt  :boom: I am a weather, one-way flight and joke bot but I learn from every interaction... \n> unlike most humans");
+    bot.reply(message, "> Beep boop pssskt  :boom: I am a weather, one-way flight and joke bot... \n> But I learn from every interaction unlike most humans");
   })
 })
 
