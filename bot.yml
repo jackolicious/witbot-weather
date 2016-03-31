@@ -8,9 +8,9 @@ config:
     friendly_name: wit.ai API Key
   - name: QPXKEY
     friendly_name: QPX Flight search key
-  - name: AWSID
-    friendly_name: QPX Flight search key
-  - name: QPXKEY
-    friendly_name: QPX Flight search key
-  - name: QPXKEY
-    friendly_name: QPX Flight search key
+  - name: AMAZONAPIID
+    friendly_name: Amazon API ID
+  - name: AMAZONSECRET
+    friendly_name: Amazon Secret Key
+  - name: AMAZONTAG
+    friendly_name: Amazon Tag
