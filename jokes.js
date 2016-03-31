@@ -17,7 +17,7 @@ function Jokes() {
     jokes[7] = '> http://poncho.is/'
     jokes[8] = '> What would Abraham Lincoln say if he found out there was a movie about him slaying vampires? \n>What\'s a movie?'
     jokes[9] = '> What happens when you don\'t pay your exorcist? \n> You get repossessed. :ghost:'
-    jokes[10] = '> What do you get when you cross a penis and a potato? > Thrown out of the super market.'
+    jokes[10] = '> What do you get when you cross a penis and a potato? \n> Thrown out of the super market.'
 
     var index = Math.floor(Math.random() * (jokes.length + 1));
 

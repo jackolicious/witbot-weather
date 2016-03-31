@@ -6,6 +6,9 @@ var slackToken = process.env.SLACK_TOKEN
 var witToken = process.env.WIT_TOKEN
 var openWeatherApiKey = process.env.OPENWEATHER_KEY
 var qpxApiKey = process.env.QPXKEY
+var amazonApiId = process.env.AMAZONAPIID
+var amazonSecret = process.env.AMAZONSECRET
+var amazonTag = process.env.AMAZONTAG
 
 var controller = Botkit.slackbot({
   debug: false
@@ -25,12 +28,17 @@ var wit;
 var weather = require('./weather')(openWeatherApiKey)
 var jokes = require('./jokes')()
 var flights = require('./flights')(qpxApiKey)
+var amazon = require('./amazon')(amazonApiId, amazonSecret, amazonTag)
 
 controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
   var wit = witbot.process(message.text, bot, message)
 
   wit.hears('hello',0.5, function(bot, message, outcome) {
     bot.reply(message, '> Greetings human! \n> :robot_face: :wave:')
+  })
+
+  wit.hears('purpose',0.5, function(bot, message, outcome) {
+    bot.reply(message, '> 42')
   })
 
   wit.hears('how_are_you',0.5, function(bot, message, outcome) {
@@ -53,6 +61,21 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
     jokes.get(function(error, msg) {
       bot.reply(message, msg)
     })
+  })
+
+  wit.hears('amazon',0.5, function(bot, message, outcome) {
+    if (!outcome.entities.object[0].value) {
+      bot.reply(message, "> :money_with_wings:Whachu tryna buy?")
+      return
+    }
+    console.log(outcome.entities.object[0].value)
+    var item = outcome.entities.object[0].value;
+
+    bot.reply(message, '> :mag:*' + item + '* coming right up...')
+    amazon.get(item, function(error, msg) {
+      bot.reply(message, msg)
+    })
+
   })
 
   wit.hears('flight',0.5, function(bot, message, outcome) {
