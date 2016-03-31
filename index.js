@@ -53,6 +53,14 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
     bot.reply(message, "> Where's the blushing bot emoji when you need it...")
   })
 
+  wit.hears('love',0.5, function(bot, message, outcome) {
+    bot.reply(message, "> Right, right now... up the butt :point_right::ok_hand:")
+  })
+
+  wit.hears('humanity',0.5, function(bot, message, outcome) {
+    bot.reply(message, "> What does it really mean to be human?")
+  })
+
   wit.hears('name',0.5, function(bot, message, outcome) {
     bot.reply(message, "> My name is Reverend Dr. Raymond Arther James III, Esquire")
   })
