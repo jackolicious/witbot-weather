@@ -14,3 +14,4 @@ config:
     friendly_name: Amazon Secret Key
   - name: AMAZONTAG
     friendly_name: Amazon Tag
+  - global: true
