@@ -1,17 +1,22 @@
 name: sample wit weather bot
 descript: witbot yml config file... takes keys for external services
-global: true
 config:
   - name: OPENWEATHER_KEY
     friendly_name: Open Weather API Key
     info: get this key from Open Weather
+    global: true
   - name: WIT_TOKEN
     friendly_name: wit.ai API Key
+    global: true
   - name: QPXKEY
     friendly_name: QPX Flight search key
+    global: true
   - name: AMAZONAPIID
     friendly_name: Amazon API ID
+    global: true
   - name: AMAZONSECRET
     friendly_name: Amazon Secret Key
+    global: true
   - name: AMAZONTAG
     friendly_name: Amazon Tag
+    global: true
