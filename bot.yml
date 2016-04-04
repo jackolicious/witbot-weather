@@ -1,5 +1,5 @@
 name: sample wit weather bot
-descript: witbot
+descript: witbot yml config file... takes keys for external services
 config:
   - name: OPENWEATHER_KEY
     friendly_name: Open Weather API Key
