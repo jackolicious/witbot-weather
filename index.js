@@ -46,7 +46,7 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   })
 
   wit.hears('help',0.5, function(bot, message, outcome) {
-    bot.reply(message, "> :partly_sunny_rain: I can give you the weather\n> :airplane: I can search for one-way flights\n> :face_with_rolling_eyes: Oh, and I can tell pretty terrible jokes")
+    bot.reply(message, "> :partly_sunny_rain: I can give you the weather\n> :money_with_wings: I can help you buy things\n> :airplane: I can search for one-way flights\n> :face_with_rolling_eyes: Oh, and I can tell pretty terrible jokes")
   })
 
   wit.hears('thanks',0.5, function(bot, message, outcome) {
