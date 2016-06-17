@@ -73,19 +73,40 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
 
   wit.hears('button',0.5, function(bot, message, outcome) {
     var reply_with_attachments = {
-      'username': 'My bot' ,
-      'text': 'This is a pre-text',
-      'attachments': [
-        {
-          'fallback': 'To be useful, I need you to invite me in a channel.',
-          'title': 'How can I help you?',
-          'text': 'To be useful, I need you to invite me in a channel ',
-          'color': '#7CD197'
-        }
-      ],
-      'icon_url': 'http://lorempixel.com/48/48'
+        "text": "You have a new request to approve.",
+        "attachments": [
+          {
+            "text": "I would like six pens for my creation station please.",
+            "fallback": "Pen request",
+            "title": "Request approval",
+            "callback_id": "approval_2715",
+            "color": "#8A2BE2",
+            "attachment_type": "default",
+            "actions": [
+              {
+                "name": "approve",
+                "text": ":thumbsup: Approve",
+                "style": "primary",
+                "type": "button",
+                "value": "yes",
+                "confirm": {
+                  "title": "Are you sure?",
+                  "text": "This will approve the request.",
+                  "ok_text": "Yes",
+                  "dismiss_text": "No"
+                }
+              },
+              {
+                "name": "decline",
+                "text": ":thumbsdown: Decline",
+                "style": "danger",
+                "type": "button",
+                "value": "no"
+              }
+            ]
+          }
+        ]
       }
-
     bot.reply(message, reply_with_attachments);
     //bot.reply(message, 'buttonszzzzz')
 
