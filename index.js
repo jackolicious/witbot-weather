@@ -72,7 +72,7 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   })
 
   wit.hears('amazon',0.5, function(bot, message, outcome) {
-    if (!outcome.entities.object[0].value) {
+    if (outcome.entities.object[0].value === undefined) {
       bot.reply(message, "> :money_with_wings:Whachu tryna buy?")
       return
     }
