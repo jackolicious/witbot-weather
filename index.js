@@ -73,8 +73,8 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
 
   wit.hears('amazon',0.5, function(bot, message, outcome) {
     console.log('amazon')
-    console.log(outcome.entities)
-    if (outcome.entities.object[0].value === 'undefined') {
+    //console.log(outcome.entities)
+    if (!outcome.entities) {
       console.log('object not found')
       bot.reply(message, "> :money_with_wings:Whachu tryna buy?")
       return
