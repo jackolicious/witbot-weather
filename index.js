@@ -31,8 +31,43 @@ var flights = require('./flights')(qpxApiKey)
 var amazon = require('./amazon')(amazonApiId, amazonSecret, amazonTag)
 
 controller.hears('.*', 'direct_message,direct_mention', function (bot, message) {
-
-  bot.reply(message, "boop");
+  var reply_with_attachments = {
+      "text": "You have a new request to approve.",
+      "attachments": [
+        {
+          "text": "I would like six pens for my creation station please.",
+          "fallback": "Pen request",
+          "title": "Request approval",
+          "callback_id": "approval_2715",
+          "color": "#8A2BE2",
+          "attachment_type": "default",
+          "actions": [
+            {
+              "name": "approve",
+              "text": ":thumbsup: Approve",
+              "style": "primary",
+              "type": "button",
+              "value": "yes",
+              "confirm": {
+                "title": "Are you sure?",
+                "text": "This will approve the request.",
+                "ok_text": "Yes",
+                "dismiss_text": "No"
+              }
+            },
+            {
+              "name": "decline",
+              "text": ":thumbsdown: Decline",
+              "style": "danger",
+              "type": "button",
+              "value": "no"
+            }
+          ]
+        }
+      ]
+    }
+  bot.reply(message, reply_with_attachments);
+  //bot.reply(message, "boop");
   /*
   var wit = witbot.process(message.text, bot, message)
 
